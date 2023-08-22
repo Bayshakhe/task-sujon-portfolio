@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Banner = () => {
+  const [openModal, setOpenModal] = useState(false);
+  // let writeName = document.querySelector(".header__data__contents__heading");
+
+  // const writeNameText = "Mohammd Sujon";
+
+  //Type Effect
+  // let start = 1;
+  // const typeWrite = () => {
+  //   if (start < writeNameText.length) {
+  //     writeName.innerHTML += writeNameText.charAt(start);
+  //     start++;
+  //     setTimeout(typeWrite, 300);
+  //   }
+  // };
+
+  // typeWrite();
   return (
     <>
       <section className="header" id="header">
@@ -25,7 +41,10 @@ const Banner = () => {
                       Download Cv
                     </a>{" "}
                     &nbsp;
-                    <button className="btn btn-dark open__modal">
+                    <button
+                      onClick={() => setOpenModal(true)}
+                      className="btn btn-dark open__modal"
+                    >
                       Hire Me
                     </button>
                   </div>
@@ -37,45 +56,50 @@ const Banner = () => {
       </section>
 
       {/* Modal section */}
-      <section className="modal" id="modal">
-        <div className="modal__wrapper">
-          <i className="bi bi-x modal__wrapper__close"></i>
-          <div className="modal__wrapper__images">
-            <img
-              src="./src/images/bg/user.jpg"
-              alt="user"
-              className="modal__wrapper__images__img"
-            />
-          </div>
-          <div className="modal__wrapper__contents">
-            <h1 className="heading">Why Hire Me?</h1>
-            <p className="modal__wrapper__contents__text">
-              Hard-working listing programmer with a flair for creating elegant
-              solutions in the least amount of time. As a freelance programmer,
-              I have created many professional websites for clients around the
-              globe.ke love what we do and we do what our clients love & work
-              with great clients all over the world to create thoughtful and
-              purposeful websites.
-            </p>
-            <div className="modal__wrapper__contents__block">
-              <span className="modal__wrapper__contents__block__left">
-                Emial
-              </span>
-              <span className="modal__wrapper__contents__block__right">
-                contact@sujon.com
-              </span>
+      {openModal && (
+        <section style={{ display: "flex" }} className="modal" id="modal">
+          <div className="modal__wrapper">
+            <i
+              onClick={() => setOpenModal(false)}
+              className="bi bi-x modal__wrapper__close"
+            ></i>
+            <div className="modal__wrapper__images">
+              <img
+                src="./src/images/bg/user.jpg"
+                alt="user"
+                className="modal__wrapper__images__img"
+              />
             </div>
-            <div className="modal__wrapper__contents__block">
-              <span className="modal__wrapper__contents__block__left">
-                Phone
-              </span>
-              <span className="modal__wrapper__contents__block__right">
-                +8801772-703036
-              </span>
+            <div className="modal__wrapper__contents">
+              <h1 className="heading">Why Hire Me?</h1>
+              <p className="modal__wrapper__contents__text">
+                Hard-working listing programmer with a flair for creating
+                elegant solutions in the least amount of time. As a freelance
+                programmer, I have created many professional websites for
+                clients around the globe.ke love what we do and we do what our
+                clients love & work with great clients all over the world to
+                create thoughtful and purposeful websites.
+              </p>
+              <div className="modal__wrapper__contents__block">
+                <span className="modal__wrapper__contents__block__left">
+                  Emial
+                </span>
+                <span className="modal__wrapper__contents__block__right">
+                  contact@sujon.com
+                </span>
+              </div>
+              <div className="modal__wrapper__contents__block">
+                <span className="modal__wrapper__contents__block__left">
+                  Phone
+                </span>
+                <span className="modal__wrapper__contents__block__right">
+                  +8801772-703036
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };

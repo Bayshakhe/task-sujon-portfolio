@@ -1,6 +1,15 @@
 import React from 'react';
 
 const Header = () => {
+//   const toggleNav = document.querySelector(".nav__wrapper__toggle");
+  const navWrapper = document.querySelector(".nav__wrapper__ul");
+//   //Mobile Responsive Menu
+//   toggleNav.addEventListener("click", () => {
+//     navWrapper.classList.toggle("nav_active");
+//   });
+  const toggleNav = () => {
+    navWrapper.classList.toggle("nav_active");
+  };
     return (
         <header  className="header" id="header">
             <nav className="nav" id="nav">
@@ -25,7 +34,7 @@ const Header = () => {
                     <a href="#blogs" className="nav__wrapper__ul__li__a">Blogs</a>
                 </li>
             </ul>
-            <div className="nav__wrapper__toggle">
+            <div onClick={toggleNav} className="nav__wrapper__toggle">
                 <i className="bi bi-text-right"></i>
             </div>
         </div>
