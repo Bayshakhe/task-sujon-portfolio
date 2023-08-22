@@ -2381,7 +2381,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  background: url("./images/bg/user.jpg");
+  background: url("../src/images/bg/user.jpg");
   width: 50%;
   height: calc(100vh - 7rem);
   background-repeat: no-repeat;
