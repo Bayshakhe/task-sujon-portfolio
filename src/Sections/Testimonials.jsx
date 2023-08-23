@@ -3,32 +3,34 @@ import user1 from '../../src/images/testimonials/user1.jpg'
 import user2 from '../../src/images/testimonials/user2.jpg'
 import user3 from '../../src/images/testimonials/user3.jpg'
 import user4 from '../../src/images/testimonials/user4.jpg'
+import user5 from '../../src/images/testimonials/user5.jpg'
+import user6 from '../../src/images/testimonials/user6.jpg'
 
 const Testimonials = () => {
   const testimonials = [
     {
-      image: {user1},
+      image: `${user1}`,
       userName: "saddiq hussain",
       country: "united kingdom",
       cardText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
     },
     {
-      image: {user2},
+      image: `${user2}`,
       userName: "json roy",
       country: "ireland",
       cardText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
     },
     {
-      image: {user3},
+      image: `${user3}`,
       userName: "mustafa kamal",
       country: "turkey",
       cardText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
     },
     {
-      image: {user4},
+      image: `${user4}`,
       userName: "muhammad ali",
       country: "pakistan",
       cardText:
@@ -82,42 +84,42 @@ const Testimonials = () => {
               <div className="testimonials__right__images">
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user1.jpg"
+                    src={`${user1}`}
                     alt="user image"
                   />
                 </div>
 
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user2.jpg"
+                    src={`${user2}`}
                     alt="user image"
                   />
                 </div>
 
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user3.jpg"
+                    src={`${user3}`}
                     alt="user image"
                   />
                 </div>
 
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user4.jpg"
+                    src={`${user4}`}
                     alt="user image"
                   />
                 </div>
 
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user5.jpg"
+                    src={`${user5}`}
                     alt="user image"
                   />
                 </div>
 
                 <div className="testimonials__right__images__block">
                   <img
-                    src="./src/images/testimonials/user6.jpg"
+                    src={`${user6}`}
                     alt="user image"
                   />
                 </div>

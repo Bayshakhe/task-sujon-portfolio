@@ -1,4 +1,5 @@
 import React from "react";
+import developer from '../../src/images/bg/user.jpg'
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-5 col-sm-12 col-xs-12">
             <div className="footer__image">
-              <img src="./src/images/bg/user.jpg" alt="developer image" />
+              <img src={`${developer}`} alt="developer image" />
               <span className="footer__image__label">Freelance Available</span>
             </div>
             <p className="footer__copyright">

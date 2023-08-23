@@ -1,35 +1,37 @@
 import React from "react";
+import testimonials from '../../src/images/posts/tailwindcss.png'
+import user from '../../src/images/bg/user.jpg'
 
 const Blogs = () => {
   const blogs = [
     {
-      image: "./src/images/posts/tailwindcss.png",
+      image: `${testimonials}`,
       cardTitle: "Frontend",
-      authorImg: './src/images/bg/user.jpg',
+      authorImg: `${user}`,
       authorName: 'muhammad asif',
       time: '15 jan 2022',
       bookName: 'Tailwindcss the complete guide for beginners'
     },
     {
-      image: "./src/images/posts/tailwindcss.png",
+      image: `${testimonials}`,
       cardTitle: "Frontend",
-      authorImg: './src/images/bg/user.jpg',
+      authorImg: `${user}`,
       authorName: 'muhammad asif',
       time: '15 jan 2022',
       bookName: 'Tailwindcss the complete guide for beginners'
     },
     {
-      image: "./src/images/posts/tailwindcss.png",
+      image: `${testimonials}`,
       cardTitle: "Frontend",
-      authorImg: './src/images/bg/user.jpg',
+      authorImg: `${user}`,
       authorName: 'muhammad asif',
       time: '15 jan 2022',
       bookName: 'Tailwindcss the complete guide for beginners'
     },
     {
-      image: "./src/images/posts/tailwindcss.png",
+      image: `${testimonials}`,
       cardTitle: "Frontend",
-      authorImg: './src/images/bg/user.jpg',
+      authorImg: `${user}`,
       authorName: 'muhammad asif',
       time: '15 jan 2022',
       bookName: 'Tailwindcss the complete guide for beginners'
