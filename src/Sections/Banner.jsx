@@ -1,22 +1,8 @@
 import React, { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
   const [openModal, setOpenModal] = useState(false);
-  // let writeName = document.querySelector(".header__data__contents__heading");
-
-  // const writeNameText = "Mohammd Sujon";
-
-  //Type Effect
-  // let start = 1;
-  // const typeWrite = () => {
-  //   if (start < writeNameText.length) {
-  //     writeName.innerHTML += writeNameText.charAt(start);
-  //     start++;
-  //     setTimeout(typeWrite, 300);
-  //   }
-  // };
-
-  // typeWrite();
   return (
     <>
       <section className="header" id="header">
@@ -28,7 +14,15 @@ const Banner = () => {
                   <div className="header__data__contents__top">
                     Hi My Name Is
                   </div>
-                  <div className="header__data__contents__heading"></div>
+                  <div className="header__data__contents__heading">
+                    <TypeAnimation
+                      sequence={["Mohammd Sujon", 1000]}
+                      wrapper="span"
+                      speed={10}
+                      style={{ display: "inline-block" }}
+                      repeat={Infinity}
+                    />
+                  </div>
                   <div className="header__data__contents__bottom">
                     MERN Stack Developer
                   </div>

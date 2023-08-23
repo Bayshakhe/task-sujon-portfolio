@@ -1,6 +1,40 @@
 import React from "react";
+import user1 from '../../src/images/testimonials/user1.jpg'
+import user2 from '../../src/images/testimonials/user2.jpg'
+import user3 from '../../src/images/testimonials/user3.jpg'
+import user4 from '../../src/images/testimonials/user4.jpg'
 
 const Testimonials = () => {
+  const testimonials = [
+    {
+      image: {user1},
+      userName: "saddiq hussain",
+      country: "united kingdom",
+      cardText:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
+    },
+    {
+      image: {user2},
+      userName: "json roy",
+      country: "ireland",
+      cardText:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
+    },
+    {
+      image: {user3},
+      userName: "mustafa kamal",
+      country: "turkey",
+      cardText:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
+    },
+    {
+      image: {user4},
+      userName: "muhammad ali",
+      country: "pakistan",
+      cardText:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsam deleniti quas corrupti quibusdam unde provident illum, repellendus enim facere.",
+    },
+  ];
   return (
     <section className="testimonials" id="testimonials">
       <div className="container">
@@ -8,149 +42,36 @@ const Testimonials = () => {
         <div className="row">
           <div className="col-xlg-8 col-md-12  col-sm-12 py-0">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div className="testimonials__card">
-                  <div className="testimonials__card__icon">
-                    <i className="bi bi-chat-dots"></i>
-                  </div>
-                  <div className="testimonials__card__user">
-                    <div className="testimonials__card__user__image">
-                      <img
-                        src="./src/images/testimonials/user1.jpg"
-                        alt="user image"
-                      />
+              {testimonials.map((t, i) => (
+                <div key={i} className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <div className="testimonials__card">
+                    <div className="testimonials__card__icon">
+                      <i className="bi bi-chat-dots"></i>
                     </div>
-                    <div className="testimonials__card__user__details">
-                      <span className="testimonials__card__user__details__name">
-                        saddiq hussain
-                      </span>
-                      <span className="testimonials__card__user__details__country">
-                        united kingdom
-                      </span>
-                      <span className="testimonials__card__user__details__rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                      </span>
+                    <div className="testimonials__card__user">
+                      <div className="testimonials__card__user__image">
+                        <img src={t.image} alt="user image" />
+                      </div>
+                      <div className="testimonials__card__user__details">
+                        <span className="testimonials__card__user__details__name">
+                          {t.userName}
+                        </span>
+                        <span className="testimonials__card__user__details__country">
+                          {t.country}
+                        </span>
+                        <span className="testimonials__card__user__details__rating">
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                        </span>
+                      </div>
                     </div>
+                    <p className="testimonials__card__message">{t.cardText}</p>
                   </div>
-                  <p className="testimonials__card__message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa ipsam deleniti quas corrupti quibusdam unde provident
-                    illum, repellendus enim facere.
-                  </p>
                 </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div className="testimonials__card">
-                  <div className="testimonials__card__icon">
-                    <i className="bi bi-chat-dots"></i>
-                  </div>
-                  <div className="testimonials__card__user">
-                    <div className="testimonials__card__user__image">
-                      <img
-                        src="./src/images/testimonials/user2.jpg"
-                        alt="user image"
-                      />
-                    </div>
-                    <div className="testimonials__card__user__details">
-                      <span className="testimonials__card__user__details__name">
-                        json roy
-                      </span>
-                      <span className="testimonials__card__user__details__country">
-                        ireland
-                      </span>
-                      <span className="testimonials__card__user__details__rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <p className="testimonials__card__message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa ipsam deleniti quas corrupti quibusdam unde provident
-                    illum, repellendus enim facere.
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div className="testimonials__card">
-                  <div className="testimonials__card__icon">
-                    <i className="bi bi-chat-dots"></i>
-                  </div>
-                  <div className="testimonials__card__user">
-                    <div className="testimonials__card__user__image">
-                      <img
-                        src="./src/images/testimonials/user3.jpg"
-                        alt="user image"
-                      />
-                    </div>
-                    <div className="testimonials__card__user__details">
-                      <span className="testimonials__card__user__details__name">
-                        mustafa kamal
-                      </span>
-                      <span className="testimonials__card__user__details__country">
-                        turkey
-                      </span>
-                      <span className="testimonials__card__user__details__rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <p className="testimonials__card__message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa ipsam deleniti quas corrupti quibusdam unde provident
-                    illum, repellendus enim facere.
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div className="testimonials__card">
-                  <div className="testimonials__card__icon">
-                    <i className="bi bi-chat-dots"></i>
-                  </div>
-                  <div className="testimonials__card__user">
-                    <div className="testimonials__card__user__image">
-                      <img
-                        src="./src/images/testimonials/user4.jpg"
-                        alt="user image"
-                      />
-                    </div>
-                    <div className="testimonials__card__user__details">
-                      <span className="testimonials__card__user__details__name">
-                        muhammad ali
-                      </span>
-                      <span className="testimonials__card__user__details__country">
-                        pakistan
-                      </span>
-                      <span className="testimonials__card__user__details__rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <p className="testimonials__card__message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa ipsam deleniti quas corrupti quibusdam unde provident
-                    illum, repellendus enim facere.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="col-xlg-4 col-md-12 col-sm-12 order-1">

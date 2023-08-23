@@ -1,6 +1,12 @@
 import React from 'react';
 
 const Skills = () => {
+    const skills = [
+        {duration: '6 years', lists: 'html, css & javascript'},
+        {duration: '6 years', lists: 'html, css & javascript'},
+        {duration: '6 years', lists: 'html, css & javascript'},
+        {duration: '6 years', lists: 'html, css & javascript'},
+    ]
     return (
         <section className="skills" id="skills">
         <div className="container">
@@ -18,22 +24,12 @@ const Skills = () => {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <h1 className="heading">my skills</h1>
-                    <div className="skills__block">
-                        <span className="skills__block__exp">6 years</span>
-                        <span className="skills__block__list">html, css &amp; javascript</span>
-                    </div>
-                    <div className="skills__block">
-                        <span className="skills__block__exp">6 years</span>
-                        <span className="skills__block__list">html, css &amp; javascript</span>
-                    </div>
-                    <div className="skills__block">
-                        <span className="skills__block__exp">6 years</span>
-                        <span className="skills__block__list">html, css &amp; javascript</span>
-                    </div>
-                    <div className="skills__block">
-                        <span className="skills__block__exp">6 years</span>
-                        <span className="skills__block__list">html, css &amp; javascript</span>
-                    </div>
+                    {
+                        skills.map((s,i)=><div key={i} className="skills__block">
+                        <span className="skills__block__exp">{s.duration}</span>
+                        <span className="skills__block__list">{s.lists}</span>
+                    </div>)
+                    }
                 </div>
             </div>
         </div>
